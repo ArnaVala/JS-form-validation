@@ -20,20 +20,21 @@
   <div class="container">
     <h2>Form validation</h2>
     <form action=""
+          id="form"
           class="form">
-      <h2 class="sr-only">Login Form</h2>
-      <legend>Login Form</legend>
-      <!-- fullname input field -->
+      <h2 class="sr-only">Register form</h2>
+      <legend>Register form</legend>
 
+      <!-- Name input field -->
       <div class="form-control">
-        <label for="username">Username</label>
+        <label for="yourName">Name</label>
         <input type="text"
-               name="username"
-               id="username"
-               placeholder="Your username">
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+               name="yourName"
+               id="yourName"
+               placeholder="Your name">
+        <i class="fas fa-check-circle icon-ok"></i>
+        <i class="fas fa-exclamation-circle icon-no"></i>
+        <small class='err'>Error Message</small>
       </div>
 
       <!-- email -->
@@ -43,35 +44,51 @@
                name="email"
                id="email"
                placeholder="your@email.com">
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+        <i class="fas fa-check-circle icon-ok"></i>
+        <i class="fas fa-exclamation-circle icon-no"></i>
+        <small class='err'>Error Message</small>
       </div>
 
-      <!-- password -->
+      <!-- drinks -->
       <div class="form-control">
-        <label for="password">Password</label>
-        <input type="password"
-               name="password"
-               id="password"
-               placeholder="Enter your password">
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+        <label for="drinks">What do you prefer?</label>
+        <select name='drinks'
+                id='drinks'>
+          <option value=""
+                  disabled
+                  selected
+                  hidden>Choose a drink</option>
+          <option value='wine'>Wine</option>
+          <option value='beer'>Beer</option>
+          <option value='coke'>Coke</option>
+          <option value='water'>Water</option>
+        </select>
+        <i class="fas fa-check-circle icon-ok"></i>
+        <i class="fas fa-exclamation-circle icon-no"></i>
+        <small class='err'>Error Message</small>
+      </div>
+      <!-- birthday -->
+      <div class="form-control">
+        <label for="date">Date of Arrival</label>
+        <input type="date"
+               name="date"
+               id="date"
+               style='color:grey'
+               placeholder="Date of Arrival">
+        <i class="fas fa-check-circle icon-ok"></i>
+        <i class="fas fa-exclamation-circle icon-no"></i>
+        <small class='err'>Error Message</small>
       </div>
 
-      <!-- confirm -->
-      <div class="form-control">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password"
-               name="confirmPassword"
-               id="confirmPassword"
-               placeholder="Confirm your password">
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
-      </div>
-      <button type="button"
+      <!-- button clicked - calls validateForm function to check if input fields are correctly filled -->
+      <button type="submit"
+              id="btn"
               class="btn"
-              onclick="validform()">Login</button>
+              onclick="">send form</button>
     </form>
+
+  </div>
+  <script src='app.js'></script>
+</body>
+
+</html>

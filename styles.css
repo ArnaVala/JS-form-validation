@@ -57,7 +57,18 @@ legend {
   border-radius: 8px;
 }
 
-.form-control input:focuse {
+.form-control select {
+  padding: 18px 18px; 
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid navy;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+
+.form-control input:focus {
   outline: none;
 }
 
@@ -81,6 +92,7 @@ legend {
   color: red;
   font-weight: bold;
   letter-spacing: 0.02em;
+  visibility: hidden;
 }
 
 .form .btn {
