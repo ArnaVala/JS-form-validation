@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: navy;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 32px;
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 0px 8px 12px 1px rgba(0,0,0, 0.05)
+}
+
+.container h2 {
+  font-size: 40px;
+  margin: 64px 0;
+  font-weight: 700;
+  color: navy;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.form-control {
+  padding: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.form-control input {
+  padding: 18px 18px; 
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid navy;
+  border-radius: 8px;
+}
+
+.form-control input:focuse {
+  outline: none;
+}
+
+.form-control i.fa-check-circle,
+.form-control i.fa-exclamation-circle {
+  position: absolute;
+  top: 48px;
+  text-align: right;
+  bottom: 0;
+  right: 18px;
+  color: #31ce15;
+  visibility: hidden;
+}
+
+.form-control i.fa-exclamation-circle {
+ color: red;
+}
+
+.form-control small {
+  margin-top: 16px;
+  color: red;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.form .btn {
+  width: 100%;
+  padding: 18px;
+  background-color: navy;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: 2px solid navy;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.4s ease-out,
+  background-color 0.4s ease-out;
+}
+
+.form .btn:hover {
+  background-color: lightblue;
+  color: navy;
+  border: 2px solid navy;
+}
+
+.form-control.err input {
+  border: 2px solid red;
+}
+
+.form-control.err small {
+  visibility: visible;
+}
+
+.form-control.success input {
+  border: 2px solid #31ce15;
+}
+
